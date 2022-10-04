@@ -3,7 +3,7 @@ import { StyleSheet,Text,View,Button,Image,SafeAreaView,TouchableOpacity, Status
 import { signInWithEmailAndPassword } from "firebase/auth";
 import{auth} from"./config/firebase";
 
-const backgroundColor =require("../assets/backImage.png");
+const backImage =require("../assets/backImage.png");
 
 export default function Login ({navigation}){
     const [email, setEmail]=useState("");
@@ -78,12 +78,17 @@ const styles= StyleSheet.create[{
     },
 
     input:{
-        backgroundColor:""
+        backgroundColor:"#F6F7F8",
+        height:58,
+        marginBottom:20,
+        fontSize:16,
+        borderRadius:10,
+        padding:12,
     },
 
     backImage:{
       width:"100%",
-      height:"75%",
+      height:340,
       position:"absolute",
       top:0,
       resizeMode:'cover',
