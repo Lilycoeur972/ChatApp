@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import { StyleSheet,Text,View,Button,Image,SafeAreaView,TouchableOpacity, StatusBar,Alert} from "react-native";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import{auth} from"./config/firebase";
+import { TextInput } from "react-native-gesture-handler";
 
 const backImage =require("../assets/backImage.png");
 
@@ -25,7 +26,7 @@ export default function Login ({navigation}){
             <SafeAreaView style={styles.form}>
                 {/* style du text de l'adresse email. */}
                 <Text style={styles.title}>Login</Text>
-                <Text input style={styles.input}placeholder="Entrer votre email"
+                <TextInput style={styles.input}placeholder="Entrer votre email"
                 autoCapitalize="name"
                 keyboardType="email-adress"
                 textContentType="emailAddress"
@@ -35,7 +36,7 @@ export default function Login ({navigation}){
 
                {/*syle du texte du mot de passe  */}
                 <Text style={styles.title}>Password</Text>
-                <Text input style={styles.input}
+                <TextInput style={styles.input}
                 placeholder="Entrer votre mot de passe"
                 autoCapitalize="name"
                 autoCorrect={false}
